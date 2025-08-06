@@ -37,6 +37,23 @@
         },
       });
     </script>
+    <!-- Event snippet for Visualização de página (1) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17386359036/xGSeCMfSu4AbEPyRu-JA',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
     <script type="text/javascript">
       !(function (o, c) {
         var n = c.documentElement,
